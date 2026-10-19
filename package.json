@@ -1,0 +1,19 @@
+{
+  "name": "ring-partner-kit",
+  "version": "0.1.0",
+  "description": "Typed, zero-dependency toolkit for the Ring Partner API (Amazon Vision API): client, webhook verification, sensor and chime helpers, and a contract-faithful local simulator.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Swapnajit Patra",
+  "keywords": ["ring", "ring-appstore", "amazon-vision", "webhooks", "hmac", "simulator", "smart-home"],
+  "exports": {
+    ".": "./src/index.ts",
+    "./sim": "./src/sim/index.ts"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.ts\""
+  }
+}
