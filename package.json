@@ -5,7 +5,15 @@
   "type": "module",
   "license": "MIT",
   "author": "Swapnajit Patra",
-  "keywords": ["ring", "ring-appstore", "amazon-vision", "webhooks", "hmac", "simulator", "smart-home"],
+  "keywords": [
+    "ring",
+    "ring-appstore",
+    "amazon-vision",
+    "webhooks",
+    "hmac",
+    "simulator",
+    "smart-home"
+  ],
   "exports": {
     ".": "./src/index.ts",
     "./sim": "./src/sim/index.ts"
@@ -14,6 +22,12 @@
     "node": ">=22.18"
   },
   "scripts": {
-    "test": "node --test \"test/**/*.test.ts\""
-  }
+    "test": "node --test \"test/**/*.test.ts\"",
+    "sim": "node src/sim/cli.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pswapnajit/ring-partner-kit.git"
+  },
+  "homepage": "https://github.com/pswapnajit/ring-partner-kit#readme"
 }
