@@ -121,6 +121,8 @@ export class SimClock implements Clock {
       if (nextTask !== undefined && nextTask > this.#simTime && nextTask < next) next = nextTask;
       this.#simTime = next;
       await this.tick();
+      // Let pending I/O (webhook deliveries, HTTP calls) complete before time moves on.
+      await new Promise((resolve) => setImmediate(resolve));
     }
     if (!wasPaused) this.resume();
   }
